@@ -1,0 +1,32 @@
+@use "mixins";
+
+:host{
+  &.link-button {
+    display: block;
+    padding: 6px 8px;
+    text-decoration: none;
+    color: var(--color-text);
+    border-radius: 4px;
+    font-weight: 500;
+    font-size: 0.875rem;
+    white-space: nowrap;
+    transition: background-color 0.2s ease, color 0.2s ease;
+
+    @media (min-width: 768px) {
+      padding: 8px 12px;
+      font-size: 1rem;
+    }
+
+    &:hover,
+    &:focus-visible {
+      background-color: var(--color-hover);
+      opacity: 0.8;
+      outline: none;
+    }
+
+    &--active {
+      color: var(--color-primary);
+      font-weight: 700;
+    }
+  }
+}

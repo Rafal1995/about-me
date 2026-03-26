@@ -1,0 +1,10 @@
+@use 'styles/tokens';
+@use 'styles/mixins';
+@use 'styles/breakpoints';
+@use 'styles/spacing';
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  margin: 0;
+}

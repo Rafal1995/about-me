@@ -1,0 +1,20 @@
+@use 'mixins';
+:host {
+  @include mixins.glass-effect();
+}
+
+.header {
+  border-bottom: 1px solid var(--color-text);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+
+  &__inner {
+    @include mixins.content-width();
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 56px;
+
+  }
+}

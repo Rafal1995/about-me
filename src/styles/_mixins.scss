@@ -1,0 +1,50 @@
+@use "./breakpoints" as b;
+@use "./spacing" as s;
+
+// Shared SCSS mixins
+// Feature: personal-portfolio-site
+$min-padding: 0;
+$max-width: b.$desktop-m;
+$mobile-s-padding: s.$space-l;
+$mobile-m-padding: s.$space-xl;
+$tablet-width: calc(#{b.$tablet} - #{s.$space-xl});
+$desktop-s-width: calc(#{b.$desktop-s} - #{s.$space-xl});
+$desktop-m-width: calc(#{b.$desktop-m} - #{s.$space-xl});
+$desktop-l-width: $max-width;
+
+@mixin content-width {
+  width: auto;
+  padding: s.$space-m;
+
+  @media (min-width: b.$mobile-s) {
+    padding: 0 $mobile-s-padding;
+  }
+
+  @media (min-width: b.$mobile-m) {
+    padding: 0 $mobile-m-padding;
+  }
+
+  @media (min-width: b.$tablet) {
+    padding: $min-padding;
+    margin: 0 auto;
+    width: $tablet-width;
+  }
+
+  @media (min-width: b.$desktop-s) {
+    width: $desktop-s-width;
+  }
+
+  @media (min-width: b.$desktop-m) {
+    width: $desktop-m-width;
+  }
+
+  @media (min-width: b.$desktop-l) {
+    width: $desktop-l-width;
+  }
+}
+
+@mixin glass-effect {
+  background: linear-gradient(0.15turn, rgba(255, 255, 255, 0.20), rgba(255, 255, 255, 0.30));
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(10px);
+}

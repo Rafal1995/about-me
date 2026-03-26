@@ -1,0 +1,11 @@
+<button
+  class="theme-switcher"
+  type="button"
+  aria-label="Toggle dark mode"
+  [attr.aria-pressed]="isDark()"
+  (click)="toggle()"
+>
+  <span class="theme-switcher__icon" aria-hidden="true">
+    {{ isDark() ? '☀️' : '🌙' }}
+  </span>
+</button>

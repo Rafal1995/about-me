@@ -1,0 +1,12 @@
+<nav class="nav-menu">
+  <ul class="nav-menu__list">
+    @for (link of links; track link.href) {
+      <li class="nav-menu__item">
+        <a
+          app-link-button
+          [routerLink]="link.href"
+        >{{ link.label }}</a>
+      </li>
+    }
+  </ul>
+</nav>

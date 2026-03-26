@@ -1,0 +1,17 @@
+.nav-menu {
+  &__list {
+    display: flex;
+    flex-wrap: wrap; // allow wrapping on very small screens
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 4px;
+
+    @media (min-width: 768px) {
+      gap: 8px;
+      flex-wrap: nowrap;
+    }
+  }
+
+
+}

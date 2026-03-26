@@ -1,0 +1,19 @@
+@use 'mixins';
+@use 'spacing';
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 320px; // ensure minimum usable width
+
+  &__main {
+    @include mixins.content-width();
+    @include mixins.glass-effect();
+    min-height: calc(100dvh - 57px);
+    margin-top: spacing.$space-xl;
+    margin-bottom: spacing.$space-xl;
+    border-radius: 8px;
+    box-shadow: 3px 3px 10px 1px var(--color-shadow)
+  }
+}
